@@ -15,7 +15,7 @@ function App() {
         </nav>
       </header>
       
-      <main id="home" className="mx-[115px] mt-[190px]">
+      <main id="home" className=" mt-[190px]">
         <Hero />
         <Projects />
       </main>

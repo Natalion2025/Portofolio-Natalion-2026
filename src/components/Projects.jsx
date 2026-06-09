@@ -1,26 +1,24 @@
 import React from 'react';
+import Gradient2 from '../assets/Gradient 2.png';
+import Github from '../assets/Github.svg?react';
+import React_icon from '../assets/React1.svg?react';
+import Vscode_icon from '../assets/Vsc.svg?react';
+import Tailwind_icon from '../assets/Tailwind.svg?react';
 
 export default function Projects() {
-  const myProjects = [
-    { id: 1, title: 'Aplikasi E-Commerce', tech: 'React, Node.js, MongoDB' },
-    { id: 2, title: 'Sistem Manajemen Tugas', tech: 'React, Firebase' },
-    { id: 3, title: 'Blog Pribadi', tech: 'Next.js, Tailwind CSS' },
-  ];
-
   return (
-    <section className="py-16 bg-[#030E21] text-white" id="projects">
-      <h2 className="text-3xl font-bold text-center mb-12 text-white">Proyek Unggulan</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {myProjects.map((project) => (
-          <div key={project.id} className="bg-gray-900 p-6 rounded-2xl shadow-sm hover:shadow-blue-900/20 hover:shadow-xl transition-all border border-gray-800 flex flex-col items-start group cursor-pointer">
-            <div className="h-12 w-12 bg-gray-800 text-blue-400 flex items-center justify-center rounded-xl mb-4 text-xl font-bold group-hover:bg-blue-600 group-hover:text-white transition-colors">
-              {project.id}
-            </div>
-            <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
-            <p className="text-gray-400 text-sm"><span className="font-semibold text-gray-300">Teknologi:</span> {project.tech}</p>
-          </div>
-        ))}
+    <section className="" >
+      <div className="z-0 ">
+        <img src={Gradient2} alt="gradient2" />
+      </div>
+      <div className="flex absolute z-10 items-center px-[115px] py-4 mt-[-620px] opacity-70 justify-between w-full h-[200px]  bg-[#030E21]">
+        <Github className='fill-white rounded-lg w-[147px] h-[147px] bg-white drop-shadow-[10px_10px_4px_rgba(175,164,164,0.25)]'></Github>            
+        <React_icon className='fill-white rounded-lg w-[147px] h-[147px] bg-white drop-shadow-[10px_10px_4px_rgba(175,164,164,0.25)]'></React_icon>            
+        <Vscode_icon className='rounded-lg w-[147px] h-[147px] bg-white drop-shadow-[10px_10px_4px_rgba(175,164,164,0.25)]'></Vscode_icon>
+        <Tailwind_icon className='rounded-lg w-[147px] h-[147px] bg-white drop-shadow-[10px_10px_4px_rgba(175,164,164,0.25)]'></Tailwind_icon>            
       </div>
     </section>
   );
 }
+
+
