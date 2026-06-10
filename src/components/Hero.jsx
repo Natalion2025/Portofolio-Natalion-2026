@@ -15,6 +15,17 @@ import Gradient_1 from '../assets/Gradient 1.png';
 export default function Hero() {
   return (
     <div className="mt-[-50px] mx-[115px] flex flex-row">
+      <style>
+        {`
+          @keyframes ringing {
+            0% { transform: rotate(-2deg) translateX(0); }
+            25% { transform: rotate(2deg) translateX(2px); }
+            50% { transform: rotate(-2deg) translateX(-2px); }
+            75% { transform: rotate(2deg) translateX(2px); }
+            100% { transform: rotate(-2deg) translateX(0); }
+          }
+        `}
+      </style>
       <section className="flex flex-col z-20 shrink-0">
         <h1 className="text-[47px] font-semibold font-poppins text-[#868490] leading-[110%] tracking-tight">
         UI/UX Designer
@@ -24,10 +35,10 @@ export default function Hero() {
         {/* Gunakan <a> untuk navigasi atau <button> untuk aksi. Tag <i> tidak semantik untuk ini. */}
         <a href="#contact" className="mt-14 w-[183px] border-b-8 border-[#F8E7A1] text-white"></a>
         <p className='mt-14 w-[411px] font-poppins text-[20px] italic leading-10'>"Bridging the gap between design and development. I build seamless, pixel-perfect, and user-centered digital experiences through UI/UX and front-end expertise."</p>
-        <button className='mt-15 flex flex-row items-center gap-18 text-start font-poppins text-[20px] leading-10 text-[#F8E7A1]'>Let's talk<Arrow_Right className='flex h-9 w-9 fill-[#F8E7A1] stroke-[#F8E7A1] stroke-2'></Arrow_Right></button>      
+        <button className='mt-15 flex flex-row items-center gap-18 text-start font-poppins text-[20px] leading-10 text-[#F8E7A1] cursor-pointer hover:text-yellow-500 group hover:animate-[ringing_0.70s_ease-in-out_infinite]'>Let's talk<Arrow_Right className='flex h-9 w-9 fill-[#F8E7A1] stroke-[#F8E7A1] stroke-2 cursor-pointer group-hover:fill-yellow-500'></Arrow_Right></button>      
       </section>
       {/*Foto Lion Profil*/}
-      <section className='z-10 mt-[-95px] ml-[-100px] shrink-0'>
+      <section className='z-10 mt-[-95px] ml-[-100px] shrink-0 hover:scale-103 transition-transform duration-300 ease-in-out'>
         <img src={Lion_Profil} alt="lion_profil" className='h-[650px] w-[363px]'/>
       </section>
       {/*GRADIENT DAN GRAFIS*/}
